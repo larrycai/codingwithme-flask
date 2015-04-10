@@ -1,0 +1,14 @@
+<body>
+        <div">
+            <div>
+                <h1>POST request with Flask</h1>
+            </div>
+            <div id="content">
+                <form method="post" action="{{ url_for('hello') }}">
+                  <label for="name">Please enter your name:</label>
+				  <input type="text" name="name" /><br />
+                  <input type="submit" />
+                </form>
+            </div>
+		</div>
+</body>
