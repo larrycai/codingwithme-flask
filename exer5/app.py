@@ -21,7 +21,6 @@ app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
 db = SQLAlchemy(app)
 
-
 # We are defining a 'Comments' model to store the comments the user
 # enters via the form.
 class Comments(db.Model):
@@ -62,13 +61,13 @@ def show_all():
 # Create tale
 @app.route('/create')
 def create():
-  db.create_all(app=app)
+  # db.cr....
   return redirect(url_for('show_all'))
   
 # Create tale
 @app.route('/drop')
 def drop():
-  db.drop_all(app=app)
+  # db.dr....
   return redirect(url_for("create")) 
 
 # This view method responds to the URL /new for the methods GET and POST
